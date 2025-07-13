@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laptop Store with Ratings</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    h2.store-heading {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+
+    .card-img-top {
+      object-fit: cover;
+      height: 200px;
+      border-bottom: 1px solid #ddd;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+
+    .card {
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #444;
+    }
+
+    .btn-group .btn {
+      border-radius: 20px;
+    }
+
+    .card small {
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    .star-rating {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+      color: gold;
+      cursor:pointer;
+    }
+
+    .star-rating .star {
+      font-size: 1.5rem;
+      color: #ccc;
+      transition: color 0.3s ease;
+    }
+
+    .star-rating .star.active,
+    .star-rating .star:hover,
+    .star-rating .star:hover ~ .star {
+      color: gold;
+    }
+
+    .rating-value {
+      font-size: 0.9rem;
+      color: #555;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="store-heading">🔥 Featured Laptops</h2>
+      <div id="layout" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+        <!-- 1 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop11.jpg" class="card-img-top" alt="Dell Inspiron 15">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Dell Inspiron 15</h5>
+              <p class="card-text">Price: ₹52,999<br>Save up to ₹7,000</p>
+              <div class="star-rating mb-3" data-product-id="dell-inspiron-15">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop12.jpg" class="card-img-top" alt="HP Pavilion x360">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">HP Pavilion x360</h5>
+              <p class="card-text">Price: ₹64,999<br>Save up to ₹8,000</p>
+              <div class="star-rating mb-3" data-product-id="hp-pavilion-x360">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop13.jpg" class="card-img-top" alt="Lenovo IdeaPad Slim 3">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Lenovo IdeaPad Slim 3</h5>
+              <p class="card-text">Price: ₹42,499<br>Save up to ₹5,000</p>
+              <div class="star-rating mb-3" data-product-id="lenovo-ideapad-slim-3">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/latop14.webp" class="card-img-top" alt="Apple MacBook Air M1">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Apple MacBook Air M1</h5>
+              <p class="card-text">Price: ₹84,900<br>Save up to ₹6,000</p>
+              <div class="star-rating mb-3" data-product-id="macbook-air-m1">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop15.jpg" class="card-img-top" alt="ASUS VivoBook 14">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">ASUS VivoBook 14</h5>
+              <p class="card-text">Price: ₹38,990<br>Save up to ₹4,500</p>
+              <div class="star-rating mb-3" data-product-id="asus-vivobook-14">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop16.jpg" class="card-img-top" alt="Acer Aspire 5">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Acer Aspire 5</h5>
+              <p class="card-text">Price: ₹47,999<br>Save up to ₹6,500</p>
+              <div class="star-rating mb-3" data-product-id="acer-aspire-5">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop17.jpg" class="card-img-top" alt="MSI Modern 14">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">MSI Modern 14</h5>
+              <p class="card-text">Price: ₹55,990<br>Save up to ₹5,000</p>
+              <div class="star-rating mb-3" data-product-id="msi-modern-14">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop18.jpg" class="card-img-top" alt="LG Gram 16">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">LG Gram 16</h5>
+              <p class="card-text">Price: ₹1,12,999<br>Save up to ₹10,000</p>
+              <div class="star-rating mb-3" data-product-id="lg-gram-16">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="./images/laptop19.jpg" class="card-img-top" alt="Realme Book Slim">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Realme Book Slim</h5>
+              <p class="card-text">Price: ₹46,999<br>Save up to ₹6,000</p>
+              <div class="star-rating mb-3" data-product-id="realme-book-slim">
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+                <span class="rating-value">(0)</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-auto">
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">Buy Now</button>
+                  <button class="btn btn-sm btn-outline-success">Add to Cart</button>
+                </div>
+                <small>Updated now</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ⭐ Rating Script -->
+  <script>
+    document.querySelectorAll('.star-rating').forEach(rating => {
+      const stars = rating.querySelectorAll('.star');
+      const valueDisplay = rating.querySelector('.rating-value');
+
+      stars.forEach((star, i) => {
+        star.addEventListener('click', () => {
+          stars.forEach((s, index) => {
+            s.classList.toggle('active', index <= i);
+          });
+          valueDisplay.textContent = `(${i + 1})`;
+        });
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

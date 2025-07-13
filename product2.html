@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container
+        {
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.1fr 1fr 1fr;
+            gap : 10px;
+
+        }
+        .heading
+        {
+            grid-column: span 3;
+            background-color: rgb(168, 167, 161);
+        }
+        img{
+            margin-top: 100px;
+            height: 300px;
+            width: 300px;
+        }
+        
+        .buy button,.cart button
+        {
+            font-size: larger;
+            width: 200px;
+            font-weight: 100px;
+            padding:10px;
+            border-radius: 10px;
+            color: aliceblue;
+            background-color: orange;
+        }
+        .action
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        .features {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+    border: 1px solid #030303;
+    color: #000000;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+    </style>
+</head>
+<body>
+    <div product1 class="grid-container">
+    <div class="heading"><h1>acer Aspire 3 A325-45 Intel Celeron N4500 Thin & Light Laptop (8GB, 512GB SSD, Windows 11 Home,
+             15.6 inch Full HD LED Backlit Display, Pure Silver, 1.5 KG)</h1></div>
+    <div class="images">
+           <img src="./images/laptop1.avif" alt="">
+    </div>
+    <div class="product details">
+        <h1>ram</h1>
+        <button>8 GB</button>
+        <button>16 GB</button>
+        <button>32 GB</button>
+        <h1>Color</h1>
+        <button>Pure silver</button>
+        <button>Black </button>
+        <h1>SSD Capcity</h1>                                             
+        <button>128 GB</button>
+        <button>256 GB</button>
+        <button>512 GB</button>
+        <h1>Display size</h1>
+        <button>15.6 inch</button>
+        <button>14 inch</button>
+        <h1>GPU Model</h1>
+        <button>Intel UHD Graphic</button>                              
+    </div>
+    <div class="features">
+        <ul><h1>Features</h1></ul>
+        <li>Display: 39.2 cms (15.6 inches), FHD LED Backlit</li>
+        <li>Memory: 8GB DDR4 RAM, 512GB SSD ROM</li>
+        <li>Processor: Intel Celeron N4500</li>
+        <li>OS: Windows 11 Home</li>
+        <li>Ultra-slim Design, Acer ComfyView</li>
+        <li>Warranty: 1 year Onsite</li>
+    </div>
+    <div class="action">
+        <div class="buy"><button>Buy Now</button> </div>
+        <div class="cart"><button>Add to Cart</button></div>
+    </div>
+    <div>
+    </div>
+    </div>
+</body>
+</html>
